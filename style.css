@@ -1,0 +1,611 @@
+/*
+Theme Name:  HolidaysToHimachal
+Author URI: https://www.thegeminigeeks.com/
+Version: 1.1
+Author: The Gemini Geeks
+Description: A theme by The Gemini Geeks
+*/
+:root {
+  /* Color Variables: */
+--primarycolor:#303030;
+--secondarycolor:#163F89;
+--tertiarycolor:#1B662D;
+--yellow:#FCB22F;
+  /* Font Variables: */
+--primaryfont:'Poppins', sans-serif;
+--secondaryfont:'Lato', sans-serif;
+}
+*{margin: 0;padding: 0;}
+body {margin: 0;padding: 0;background: #fff;font-family: var(--secondaryfont);-webkit-font-bysmoothing: antialiased;-moz-osx-font-smoothing: grayscale;color:var(--primarycolor);font-weight: 400;font-size: 1rem;line-height: 1.8;text-rendering: optimizeLegibility;}
+a img {border: none;}
+a {color:var(--primarycolor);text-decoration: none !important;transition:0.8s;transition: all 0.8s ease;-moz-transition: all 0.8s ease;-ms-transition: all 0.6s ease;-webkit-transition: all 0.8s ease;-o-transition: all 0.8s ease;}
+a:hover {transition:0.8s;text-decoration: none;color: var(--secondarycolor);}
+.clear {clear: both;}
+.divider {clear: both;border-bottom: 1px solid #ddd;margin: 0 0 1.2rem 0;padding: 20px 0 0 0;}
+.alignleft{float:left;margin:0 10px 0 0;}
+.alignright{float:right;margin:0 0 0 10px;}
+.aligncenter{display:block;margin:0 auto;}
+
+#scroll {position: fixed;right: 10px;bottom: 10px;cursor: pointer;width: 40px;height: 40px;background-color: var(--secondarycolor);text-indent: -9999px;display: none;-webkit-border-radius: 60px;-moz-border-radius: 60px;border-radius: 60px;z-index: 999;}
+#scroll span {position: absolute;top: 50%;left: 50%;margin-left: -8px;margin-top: -12px;height: 0;width: 0;border: 8px solid transparent;border-bottom-color: #ffffff;}
+#scroll:hover {background-color:var(--tertiarycolor);opacity: 1;filter: "alpha(opacity=100)";-ms-filter: "alpha(opacity=100)";}
+
+.inner {width: 1170px;margin: 0 auto;max-width: 100%;}
+.overlay {position: absolute;left: 0;right: 0;top: 0;bottom: 0;background-image: -webkit-linear-gradient(90deg, #1b662deb -10%, #173e8982 100%);background-image: -moz-linear-gradient(90deg, #1b662deb -10%, #173e8982 100%);background-image: -o-linear-gradient(90deg, #1b662deb -10%, #173e8982 100%);background-image: linear-gradient(90deg, #1b662dbd -10%, #173e8973 100%);}
+.overlay1 {position: absolute;left: 0;right: 0;top: 0;bottom: 0;background:rgb(0,0,0,0.2)}
+
+.header_area {position:relative;top: 0;left: 0;width: 100%;z-index: 999;transition: background 0.4s, all 0.3s linear;}
+.header_area .row{align-items:center}
+
+.header_area.navbar_fixed .main_menu {position: fixed;width: 100%;top: -70px;left: 0;right: 0;z-index: 997;background: #f5f5f5;transform: translateY(70px);transition: transform 500ms ease, background 500ms ease;-webkit-transition: transform 500ms ease, background 500ms ease;box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.1);}
+.header_area.navbar_fixed #logo img{width:200px}
+
+#mainnav{background:var(--tertiarycolor);padding: 10px 0}
+#fixednavgap.fixed {height:160px;width:100%;}
+
+.contactbox .fas.fa-phone {
+	transform: rotate(180deg);
+}
+#topheader{align-items: center;padding: 5px 0;}
+.threesec{width:100%;display: flex;align-items:Center}
+.threesec .col-md-4{border-right:1px solid #888}
+.threesec .col-md-4:nth-child(3){border-right:0px}
+.contactbox{color:var(--primarycolor);display:flex;align-items:center;box-sizing:border-box;min-height: 100px;}
+.contactbox i{color:#fff;font-size:1.8rem;margin-right:1rem;background: var(--secondarycolor);width: 50px;height: 50px;line-height: 50px;padding: 0 10px;border-radius: 10px;}
+.contactbox h3{margin:0;font-size: 14px; font-weight:500;}
+.contactbox .fa-phone:before{/* transform: rotate(45deg); */-webkit-transform: rotate(90deg);}
+.contactbox img{width: 90px;margin-left: 44px;}
+.border {background-color: var(--tertiarycolor);background-image: linear-gradient(90deg, #1b662dbd -10%, #173e8973 100%);padding: 10px;width: 500px;}
+.mobbtn{display:none !important;}
+#logo .site-title {float:left;}
+#logo .site-title a{color:var(--primarycolorcolor);font-size: 1.5rem;}
+#logo img{width:250px;}
+.site-menu-toggle{display: none;}
+
+h1,h2,h3,h4,h5,h6 {margin: 0 0 0.6rem 0;color: #000;line-height: 1.2;font-family: var(--primaryfont);}
+
+h1 {font-size:2.5rem;text-transform: uppercase;color:var(--secondarycolor);letter-spacing:1px;margin:0;line-height:3rem}
+h2 {font-size: 28px;}
+h3 {font-size: 24px;}
+h4 {font-size: 20px;}
+h5 {font-size: 18px;}
+h6 {font-size: 16px;}
+.menu-bar {text-align: right;width: 30px;}
+.menu-bar span { height:2px; background:var(--secondarycolor);display:block; margin-bottom:6px;}
+.menu-bar span:nth-child(1) {
+ /*! width:28px; */
+}
+.menu-bar span:nth-child(2) {width:30px;}
+.menu-bar span:nth-child(3) {width:15px; margin-left:auto;margin-bottom:0}
+
+#floatbtn .label-container{position:fixed;bottom:50%;right:35px;display:table;visibility: hidden;z-index:9999;}
+#floatbtn .label-text{color:#FFF;background:var(--secondarycolor);display:table-cell;vertical-align:middle;padding:10px;border-radius:3px;}
+#floatbtn .label-arrow{	display:table-cell;	vertical-align:middle;	color:var(--secondarycolor);}
+#floatbtn .float {position: fixed;width: 31px;height: 169px;bottom: 30%;right: 0;background-color: var(--secondarycolor);color: #FFF;text-align: center;box-shadow: 2px 2px 3px #999;z-index: 99;writing-mode: vertical-lr;font-size: 19px;line-height: 150%;letter-spacing: 1px;}
+#floatbtn a:hover {color: #fff !important;background-color: var(--tertiarycolor);}
+#floatbtn .my-float{font-size:24px;margin-top:18px;}
+#floatbtn a.float + div.label-container {visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s ease;}
+#floatbtn a.float:hover + div.label-container{ visibility: visible;  opacity: 1;}
+#scrolleffect {padding-top: 6.25rem; margin-top: -6.25rem;}
+.smalltext{text-transform: uppercase;letter-spacing: 5px;display: block;text-align: center}
+.btn-primary{background: transparent;padding: 0.5rem 3rem;margin: 2rem auto;display:table;border: 1px solid #fff;color: #fff;transition: .6s ease-in-out;text-transform:uppercase}
+.btn-primary:hover{background:var(--secondarycolor);color:#fff;border-color:var(--secondarycolor)}
+.more-btn{padding: 8px 35px;background: var(--secondarycolor);margin:1rem auto 0;text-align: center;color: #fff;text-transform: uppercase;font-weight: 600;font-size: 1rem;position: absolute;bottom: 1rem;left: 10px;right: 10px;margin-top: 3rem;}
+.more-btn:hover{background:var(--tertiarycolor);color:#fff !important; }
+
+#slider{position:relative;align-items: center;display: flex;}
+#slider .item{position: relative;height:auto;display: flex;}
+#slider .item img{object-fit:fit}
+
+#slider video{position:relative;align-items: center;display: flex;height:auto;object-fit:fill}
+.carousel-caption {right: 15%;left: 15%;z-index:997;padding-top: 20px;padding-bottom: 20px;text-align: center;position:absolute;background: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/09/Holidaystohimachal-himachal.png');background-repeat: no-repeat;background-size: 100%; top: 12rem;}
+.carousel-caption .subheading{font-weight: 600;color:#fff;font-size: 14px;letter-spacing: 3px;text-transform: uppercase;}
+.carousel-caption h1{font-size: 5em;color: #fff;line-height: 5rem;font-weight:700;text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);}
+.carousel-caption span{margin:0 5px}
+.carousel-caption p{color: #fff;font-weight: inherit;font-size:1.3rem;font-weight:700;text-transform:uppercase;text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);}
+
+.banner{position: relative;}
+.banner .social{position: absolute;top:5rem;right:1rem}
+.banner .social ul{display: block}
+.banner .social ul li{margin:10px 0}
+
+.heading{border-left:10px solid var(--tertiarycolor);padding-left: 1.5rem;margin-bottom: 2rem;padding-bottom:1.5rem; }
+.about .heading {
+	font-size: 2rem;
+}
+.icon-box {margin-bottom: 1rem;padding: 1rem 1rem;background: #fff;position: relative;margin-top: 5rem;box-shadow: 1px 9px 16px 0px rgb(0 0 0 / 18%);border-radius: 10px;}
+.icon-box:hover{background:#F6F8FB;}
+.choose-icon {position: absolute;top: -52px;right: 28px;}
+.choose-icon img {height: 100px;width: 100px;padding: 10px;border: 6px solid var(--tertiarycolor);border-radius: 50%;margin-bottom: 1rem;background: #fff;	box-shadow: 1px 9px 16px 0px rgba(0, 0, 0, 0.18);	text-align:center;
+}
+.packagerow {
+	display: flex;
+	flex-wrap: wrap;
+}
+#packages{padding: 4rem 0;width: 100%;}
+.packagerow{width: 100%;}
+#tagpage .col-md-4{margin-top:1rem}
+#tagpage .box{background:#F6F8FB;padding: 10px;position:relative;border:1px solid #eee;transition: 0.6s ease-in-out;overflow: hidden;}
+#tagpage .box:hover{box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);}
+#tagpage .tag {position: absolute;background: #FCB22F;top: 3.3rem;color: #fff;transform: rotate(-45deg);left: -3rem;width: 230px;text-align: center;}
+.packagerow{width: 100%;}
+.packagerow .col-md-4{margin-top:1rem}
+.packagerow .box{background:#F6F8FB;padding: 10px;position:relative;border:1px solid #eee;transition: 0.6s ease-in-out;overflow: hidden;}
+.packagerow .box:hover{box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);}
+.packagerow .tag {position: absolute;background: #FCB22F;top: 3.3rem;color: #fff;transform: rotate(-45deg);left: -3rem;width: 230px;text-align: center;}
+.pcontent h4{margin:10px 0;font-weight:500;font-size:18px; min-height: 65px;}
+.packagetitle{display: flex;justify-content: space-between; border-top: 1px solid #E6E6E6; padding-top: 8px;}
+.features ul{display: grid;grid-template-columns: auto auto auto auto;margin-top: 1rem;}
+.features ul li{list-style-type: none;text-align: center;}
+.features p{list-style-type: none;text-align: center;}
+.features img{width: 50px;margin:0 auto;opacity:0.4;}
+.stayday{display:flex;}
+.stayday i {font-size: 18px;color: var(--secondarycolor);margin-right: 10px;margin-top: 7px;}
+.packagebtn i{color: var(--secondarycolor);font-size: 16px;}
+.packagebtn .fas.fa-arrow-right {margin-left: 7px;}
+.packagerow p:empty{display:none}
+
+#destination{background:url('https://www.holidaystohimachal.com/wp-content/uploads/2023/01/destinationbg.jpg');width:100%;padding:4rem 0;background-repeat:no-repeat;background-size:cover;background-attachment:fixed; background-position: center; position:relative;}
+#destination .heading,#destination .heading h1{color:#fff;border-color:#fff; position: relative;}
+.destinationslider{text-align: center}
+.destination .item {text-align: center;text-transform: uppercase;transition: 0.6s;display: block;margin-right: 1rem; overflow: hidden; position: relative;}
+.destination .item img{min-height:330px;}
+.owl-nav {display: none;}
+.destination .owl-nav .owl-next, .destination .owl-prev {position: absolute;top:40%;transition: 0.6s;}
+.destination .owl-nav .owl-prev {left: -3rem;display: block;transition: 0.6s; }
+.destination .owl-nav .owl-next {right: -3rem;display: block;transition: 0.6s;}
+.destination .owl-nav img{width: 45px !important;}
+.destination .item:hover{margin-top:-2rem;}
+
+.thumb{position: relative;overflow: hidden;display: block;border-radius: 3px;}
+.thumb::before {  content: "";  position: absolute;  left: 0;  top: 0;  width: 100%;  height: 100%;  z-index: 2;  opacity: .3;  -webkit-transition: all .3s ease; transition: all .3s ease; background-color: #000;}
+.destination-text {position: absolute; left: 0; width: 100%; bottom: 0; z-index: 2; transition: all .3s ease;}
+.destination-text h3{font-weight: 400; font-size: 30px; color: #fff;}
+.destinationslider .item:hover .thumb::before { opacity: .7;}
+.destinationslider .item:hover .destination-text { bottom: 35%;}
+#twosec{width:100%;padding:4rem 0 6rem;}
+#twosec img{border:15px solid #E1E1E1}
+#twosec .col-md-6{position:relative}
+#twosec h2{position: absolute;top: 6rem;left: 4rem;color: #fff;width: 10%;font-size: 2.5rem;text-transform: uppercase;line-height: 2.5rem;}
+#fantastic{width: 100%;padding:5rem 0 2rem;background:url('https://www.holidaystohimachal.com/wp-content/uploads/2022/09/Holidaystohimachal-banner.jpg');background-repeat: no-repeat;background-size:100%;height:280px;position: relative;}
+#fantastic img{position:absolute;right:2rem;top:-4rem;width:330px;animation: move 6s linear infinite;}
+@keyframes move{
+ 0% {
+  transform:translateY(0)
+ }
+ 25% {
+  transform:translateY(-30px)
+ }
+ 50% {
+  transform:translateY(0)
+ }
+ 75% {
+  transform:translateY(40px)
+ }
+ 100% {
+  transform:translateY(0)
+ }
+}
+
+
+#fantastic .more-btn{display: table;position: absolute;bottom:2rem;left: 0;right:0;margin: 0 auto;}
+
+#payment{width: 100%;background:var(--secondarycolor);float: left;padding: 2rem 0;}
+#payment h4{color:#fff;text-transform: uppercase;margin-bottom:1.5rem}
+#payment li{display: flex;margin:5px 0}
+#payment li img{width: 28px;margin-right:10px}
+#payment p{color:#fff}
+
+#testimonials{padding: 4rem 0px;width: 100%;float: left;text-align: center}
+.testimonial .testimonial-item {padding:28px 25px; background:#f5f5f5;}
+#testimonials .testimonial h4{margin: 10px 0;color:var(--secondarycolor);}
+#testimonials .owl-nav, #testimonials .owl-dots {margin-top: 25px;text-align: center;}
+#testimonials .owl-dot {display: inline-block;width:30px; height:4px; background:#dbd9e6; border-radius:5px; margin:5px 5px}
+#testimonials .owl-dot.active {background-color:var(--secondarycolor);}
+.booking-online {padding: 2rem;background-color: #F6F8FB;border: 1rem solid var(--tertiarycolor);}
+.column{column-count: 2;}
+.column3{column-count: 3;}
+
+#tagpage{width:100%;padding:1rem 0 3rem}
+#blog{width:100%;padding:4rem 0;}
+#blog h1{text-align: center;}
+#blog .col-md-4{margin:3rem 0.5rem 0;width:32%;-webkit-transition-duration: 800ms;transition-duration: 800ms;cursor:pointer;padding:0 0 1.5rem;}
+.blog-thumbnail img{width: 100%;}
+#blog .col-md-4:hover{box-shadow:12px 15px 20px 0px rgba(46,61,73,0.15) ;-webkit-transition-duration: 800ms;transition-duration: 800ms;cursor:pointer;}
+#blog .col-md-4 .post-title{font-size: 1.2rem;color:var(--primarycolor);margin:1rem 0;display: block;font-weight: bold;}
+#blog .col-md-4 .post-title:hover{color:var(--secondarycolor);}
+#blog .col-md-4 p{text-align: justify;margin:0 0 25px;padding:0 15px;}
+#blog .col-md-4 .more-link{background:var(--secondarycolor);text-align: center;color:#fff;max-width: 100%;float: right;padding:0.5rem 1rem;margin:0 1rem;border: 2px solid var(--secondarycolor);transition: .6s ease;}
+#blog .col-md-4 .more-link:hover{background:transparent;color:var(--primarycolor);border-color: var(--secondarycolor);}
+.bottom-form {
+	margin-bottom: 2rem;
+	padding:2rem;
+	text-align:center;
+}
+/************Start Single Tour Style**********/1rem
+#single-post {padding:2rem 0 3rem;}
+.heading1{margin:1.5rem 0;position: relative;border-bottom:1px solid #777;padding-bottom:10px;text-transform: uppercase;font-weight: 500;letter-spacing: 1px}
+.heading1:after{content:"";position:absolute;left:0;height: 4px;background:var(--tertiarycolor);width:150px;bottom:-2px}
+#single-post p{margin-bottom:10px;color:#303030}
+#single-post h4{font-weight: 400;font-size: 22px;text-transform: capitalize;}
+
+ul.list{margin-bottom:1.5rem !important}
+ul.list li {list-style :none;margin: 0 0px 10px 0px;display: flex;list-style-position: inside;color:#303030}
+ul.list li:before{color: var(--tertiarycolor);;content: "\f00c";margin-right: 8px;font-family:'Font Awesome 5 Free';font-weight:900}
+.day {margin-top: 1.4rem;background-color: #F5F5F5;padding: 1rem;border-radius: 10px;}
+.day i{color:var(--tertiarycolor);margin-right:5px}
+.briefdetail {background: #f5f5f5;border-radius: 1rem;padding: 2rem;/*! position: absolute; *//*! top: 27rem; */width: 100%;margin-top: -11rem;position: relative;margin-bottom: 2rem;}
+.briefdetail #contactform{width:70%;margin:0 auto;float:none}
+.briefdetail #contactform input{padding:7px 10px;margin:5px 0}
+.briefdetail #contactform input.wpcf7-submit{width: 150px;height:35px;margin-bottom: 0;}
+.briefdetail h3{margin:0;margin-bottom:1.5rem}
+.briefdetail .col-md-5{text-align: center}
+.briefdetail .col-md-5 h3{text-align: center;border-bottom:1px solid var(--tertiarycolor);padding-bottom:10px;display: inline-block;margin:0}
+.briefdetail #contactform{background:transparent}
+.overview .row {align-items: center;border: 1px solid #f5f5f5;margin: 1rem 0;background-color: #F6F8FB;border-radius: 2rem 0;}
+.overview .place-img {height: 170px;width: 170px;}
+.briefdetail .row{/*! align-items: center */}
+.briefdetail img{background-color:var(--tertiarycolor);background-image:linear-gradient(90deg, #1b662dbd -10%, #173e8973 100%);padding: 10px;width:450px;margin:1rem auto 0}
+.threeimg {padding: 4rem 0;}
+.rtable{width: 100%;margin:1rem 0}
+.rtable td,.rtable th{border:1px solid #ccc;padding:5px}
+.rtable th{background:#777;color:#fff;font-weight:500}
+.rtable .price{background: var(--yellow);text-align:center}
+
+.div-arrow-down{position: relative;height: 1px;margin:1rem 0}
+.div-arrow-down:before{content: "";position: absolute;top: 0;left: 5%;right: 5%;width: 90%;height: 2px;background-image: linear-gradient(to right, transparent, rgb(27,102,45), transparent);}
+.div-arrow-down:after{content: "";position: absolute;z-index: 1;top: -6px;left: calc(50% - 7px);width: 15px;height: 15px;transform: rotate(45deg);	background-color: white;	border-bottom: 2px solid rgb(27,102,45);	border-right: 2px solid rgb(27,102,45);}
+blockquote {background: #f5f5f5;padding: 1rem;font-size: 1.5rem;text-align: center;border-radius: 2rem 0 2rem 0;line-height: 2rem;}
+
+.row1{display: flex;align-items: center;border:1px solid #eee;margin:2rem 0;background:#f5f5f5;padding:10px 0;border-radius:10px}
+.textbox{padding-left:1.5rem}
+.row1:nth-child(2n+1) .textbox{/*! padding-left:0; *//*! padding-right: 1.5rem; */}
+.textbox h4{font-size:1.7rem;text-transform: capitalize;line-height: 2.5rem;}
+#single-post h5 {color: var(--secondarycolor);font-weight: 500;font-size: 22px;text-align: center;}
+#single-post {padding: 3rem 0;}
+.place-img {height: 150px;width: 150px;border-radius: 100%;background-color: var(--tertiarycolor);background-image: linear-gradient(90deg, #1b662dbd -10%, #173e8973 100%);overflow: hidden;display: flex;margin: 1.5rem auto 1rem;padding: 5px;}
+.place-img img {object-fit: fit;border-radius:50%;}
+.covered-places {padding: 2rem 0;text-align:center;}
+.covered-places h4 {font-size: 18px !important;text-transform: uppercase;}
+
+/************End Single Tour Style**********/
+
+.contact-details {padding-top: 4rem;}
+.contact-address {	background: #f2f2f2;padding: 1rem;border: 1rem solid var(--tertiarycolor);}
+#contactbox{background-color: #fff;padding:1rem; border:10px solid var(--tertiarycolor)}
+#contactform{line-height: 20px;padding-top:1rem;display:table}
+#contactform *{font-size: 15px;color:#595966;font-family: var(--secondaryfont)}
+#contactform .wpcf7-spinner{display:none !important}
+#contactform h3{font-size:26px;text-align: center;}
+#contactform i{font-size:26px;}
+#contactform p{margin: 0;padding: 0 0 10px 0;line-height: 20px;}
+#contactform h2{font-size: 24px;margin:25px 0 15px;font-weight:bolder;border-bottom:1px solid #63C6C1;padding:0 0 8px 0;}
+#contactform input{width: 100%;background: transparent;border: 1px solid var(--primarycolor);padding: 10px 20px;margin:10px 0;}
+#contactform select{width: 100%;background:#F6F8FB;border: 1px solid var(--primarycolor);padding: 10px 20px;
+	margin:10px 0;color:#595966;-webkit-border-radius:0px}
+#contactform textarea{width: 100%;height: 125px;background: rgba(255,255,255,0.2);border: 1px solid var(--primarycolor);padding: 20px;margin:10px 0;resize:none}
+#contactform input:focus, #contactform textarea:focus, #contactform select:focus{outline:none;
+	background: rgba(255,255,255,0.5);border: 1px solid var(--tertiarycolor);color:var(--tertiarycolor)}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */color:#595966 !important;opacity: 1;}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */color:#595966 !important;opacity: 1;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */color:#595966 !important;opacity: 1;}
+:-ms-input-placeholder { /* Internet Explorer 10+ */color:#595966 !important;opacity: 1;}
+
+#contactform input.wpcf7-submit{background: var(--tertiarycolor);color: #fff;text-transform: uppercase;cursor: pointer;border: none;margin: 15px auto;display: table;width: 200px;transition: 0.6s ease-in-out;letter-spacing: 1px;border: 1px solid var(--tertiarycolor);height: 48px;-webkit-border-radius: 0rem;}
+#contactform input.wpcf7-submit:hover{background:var(--secondarycolor);color:#fff;}
+
+textarea, iframe{max-width: 100%;}
+.wpcf7-response-output{color:#595959 !important;background:tranparent !important;border:0px !important}
+#contactform .wpcf7-not-valid-tip {background: var(--secondarycolor) !important;}
+
+#radiobtn{display:flex;align-items:center;}
+#radiobtn .wpcf7-form-control-wrap{width:40%}
+#contactform .wpcf7-radio{display: grid; grid-template-columns: repeat(auto-fit,minmax(100px,120px));grid-gap: 0;}
+#contactform .wpcf7-list-item{ }
+#contactform .wpcf7-list-item label{display: flex;align-items: center;}
+#contactform .wpcf7-list-item-label{white-space: nowrap;margin-right:10px}
+#contactform .wpcf7-radio input{width: auto}
+
+.post {padding: 10px;margin: 0 0 10px 0;}
+.post p {margin-bottom:1rem}
+.post p a {font-weight: bold;}
+.post a {color: #000;}
+.post ul {margin: 10px 0 0px 0px;}
+.post ul li {list-style :none;margin: 0 0px 10px 0px;display: flex;list-style-position: inside;}.category-3 
+
+.post ul li:before{color: #F47E49;content: "\f00c";margin-right: 8px;font-family:'Font Awesome 5 Free';font-weight:900}
+.post h3{text-transform:capitalize; font-weight:500;}
+.tag-icon {color: red;margin-right: 4px;font-size: 18px;}
+.tag-icon{animation: animationFramesTwo 1.4s infinite linear alternate;}
+@keyframes animationFramesTwo {
+ 0% {
+  transform:scale(1)
+ }
+ 50% {
+  transform:scale(1.1)
+ }
+ 100% {
+  transform:scale(1)
+ }
+}
+
+#floatbtn{position: fixed;right: 0;top: 40%;z-index: 999;display:none !important}
+#floatbtn .more-btn{writing-mode: vertical-rl;border-radius:0;padding:20px 5px;margin:0;float: right;background:var(--tertiarycolor);color:#fff;border:0}
+#floatbtn .more-btn:hover{background:var(--secondarycolor)}
+.category-3 #pagetitle {background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/10/honeymoon.jpg') !important;padding: 12rem;}
+
+.category-4 #pagetitle {background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/10/adventure-tours.jpg') !important;}
+.category-1 #pagetitle {background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/11/volvo-bus-1.jpg') !important;padding: 13rem 0 !important;}
+.page-id-48 #pagetitle {background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/11/h2h-Banner-2.jpg') !important; padding: 7rem 0px 16rem !important; }
+.category-1 #pagetitle h1{font-size:3rem;}
+.page-id-48 #pagetitle h1{font-size:3rem}
+.page-id-48 #main {padding: 0rem 0;}
+.page-id-49 #pagetitle {padding:10rem;}
+.page-id-975 #pagetitle {padding: 13rem;background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/11/Slider-Hotel-new-Overlay.jpg');}
+#pagetitle {padding: 10rem 0 ;color: #fff;background-size: cover;position: relative;width: 100%;background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/10/ridge.jpg');}
+.single-post #pagetitle{padding:7rem 0 16rem;}
+#banner h1 {color: #fff;text-transform: capitalize;font-weight: 600;font-size: 2rem;text-align: center;text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);padding-top: 11rem !important;}
+#pagetitle h1 {color: #fff;text-transform: capitalize;font-weight: 600;font-size: 2rem;text-align: center;text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);}
+#pagetitle p {color:#fff;text-align: center;font-size: 20px;}
+.breadcrumb {list-style: none;border-radius: 4px;max-width: 100%;float: none;font-size: 14px;text-transform: uppercase;color: var(--primarycolor);font-weight: 300;}
+.breadcrumb a:hover{color:var(--tertiarycolor);}
+.breadcrumb>li {display: inline-block;}
+.breadcrumb>li+li:before {content: "\f101";padding: 0 5px;color: #fff;font-family:'Font Awesome 5 Free';font-weight:900}
+/* #pagetitle .breadcrumb> a {color: #fff} */
+
+.mainhead{position: relative}
+#bannertext {height: 400px;background-size: cover !important;background-repeat: no-repeat !important;position: relative;}
+#bannertext .row{/*! align-items: center; */}
+#bannertext h1{color: #fff;text-transform: capitalize;font-weight: 600;font-size: 2rem;text-align: center;text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);top: 10rem;position: absolute;left: 7rem;}
+#rightform{background:rgb(255,255,255,0.7);width:25%;margin:10px auto;display: table;float:none;padding:10px;position: absolute;top:0%;right:5%}
+#rightform #contactform{float:left}
+#rightform h2{text-align:center;margin:0;font-weight:400}
+
+.cta {  padding: 3rem 0;background-image: url(https://www.holidaystohimachal.com/wp-content/uploads/2022/10/holidayinhimachal.jpg);background-size: cover;background-repeat: no-repeat;background-position: center;}
+.cta h2 { color: #fff;margin: 0 auto; font-size:30px;}
+.cta-btn {color: var(--primarycolor);background-color: #ffff;padding: 0.8rem 4rem;margin-right: 10px;font-size: 18px;font-weight: 500;}
+.cta-btn:hover {background: var(--secondarycolor);color: #fff;}
+.booking-online #contactform input {border: 1px solid #DDE3EC;margin-right: 10px;}
+.booking-online #contactform select {border: 1px solid #DDE3EC;}
+.booking-online #contactform textarea {background: #F6F8FB;border: 1px solid #DDE3EC;}
+.page-id-47 #pagetitle {padding: 8rem;background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/10/about.jpg');}
+
+.page-id-48 .partner .owl-dots {margin-top:5px ;text-align: center;}
+.page-id-48 .partner .owl-dot {display: inline-block;width: 10px;height: 10px;background:#dbd9e6;border-radius: 50%;margin: 5px 5px;}
+.page-id-48 .partner .owl-dot.active {background-color:var(--secondarycolor);}
+.page-id-48 .partner {
+	margin-bottom: 2rem;
+}
+.hotels th {background: #F6F8FB;color: var(--primarycolor);; display:flex;align-items: center;justify-content: space-between; font-weight:600;padding: 5px 10px; text-transform:uppercase;font-size: 13px;}
+.rating {width: 100px;}
+.btn {
+	background: var(--secondarycolor);
+	width: fit-content;
+	margin: 0 auto;
+	padding: 5px 40px;
+	border-radius: 20px;
+}
+.btns {text-align: center;margin: 2rem 0 0;}
+#main{padding: 3rem 0;}
+#main p{color:var(--primarycolor);font-size: 16px;text-align:justify;}
+#main a{color:var(--secondarycolor)}
+#main a:hover{color:var(--primarycolor);}
+#main h3{line-height: 50px;}
+#main li{list-style: none;line-height: 30px;color: var(--primarycolor);}
+
+.widget {padding: 0 1.5rem;}
+.widget h3 {border-bottom: 2px solid var(--primarycolor);text-transform: uppercase;padding: 0 0 1rem 0;}
+.widget ul li {display:flex;list-style-type:none;border-bottom: 1px dashed var(--primarycolor);margin: 0 0 0.4rem 0;}
+.widget ul li::before{content: "\f078";margin-right: 1rem;font-size: 15px;color: var(--primarycolor);font-family: 'Font Awesome 5 Free';font-weight: 900; display:none;}
+.widget hr {margin-top: -1rem;}
+.paginate{text-align: center;margin:0 auto;}
+.wp-pagenavi {clear: both;padding: 1.5rem 0;}
+.wp-pagenavi a {display:inline-block;padding: 0.1rem 1.2rem !important;margin: 2px;border: 1px solid #ccc;color: var(--primarycolor);background: #fff;border-radius: 3px;}
+.wp-pagenavi a:hover {color: #fff !important;background: var(--secondarycolor);}
+.wp-pagenavi span.pages {padding: 0.3rem 1.2rem !important;margin: 3px;border-radius: 3px;border: 1px solid #ccc;}
+.wp-pagenavi span.current {padding: 0.7rem 1rem;margin: 3px;font-weight: 700;border: 1px solid #ccc;background: var(--secondarycolor);border-radius: 3px;color: #fff;}
+.wp-pagenavi span.extend {padding: 15px;margin: 3px;border: 1px solid #000;color: #fff;background: #000;}
+.wp-pagenavi .next-comment-page,.wp-pagenavi .previous-comment-page {padding: 12px 14px;border: 1px solid #aaa;}
+.wp-pagenavi a.nextpostslink {font-weight: 500;padding: 0.2rem 1rem !important;color: var(--secondarycolor);}
+
+#commentlist{padding:5px;}
+#commentlist .comment{padding:5px;margin:0 0 10px 0;border:1px solid #eee;border-radius:5px;}
+#commentlist .fn{font-weight:bold;font-style:normal;}
+#commentlist .commentmetadata {font-size:11px;margin:0 0 5px 0;}
+#commentlist .commentmetadata a{color:#888;font-size:11px;}
+
+#respond {padding:10px;background:#fafafa;border:1px solid #ddd;border-radius:5px;margin:5px;}
+#respond h4{margin:0 0 10px 0;}
+#respond h3{color:var(--tertiarycolor)}
+#respond p{margin:0 0 10px 0;border:none !important;}
+#respond input, #respond textarea {padding: 1rem 2rem;background: #f5f5f5;border: 1px solid #ccc;color: var(--tertiarycolor);}
+#respond input:focus, #respond textarea:focus {background:#fff;}
+#respond textarea{width:500px;max-width:90%;}
+#respond textarea:focus{outline:none;}
+#respond input#author{width:200px;margin:0 5px 0 0;}
+#respond input#email{width:200px;margin:0 5px 0 0;}
+#respond .copy{display: none}
+
+#bottom {background: #f5f5f5;color:var(--primarycolor);font-size: 14px;padding: 1rem 0 1rem;}
+#bottom a {color:var(--primarycolor);}
+#bottom a:hover {color:var(--secondarycolor);}
+#bottom i {color: #fff;margin-right: 0px;}
+#bottom .widget h3 {border: none;text-align: left;font-weight: 700;color:var(--primarycolor);}
+#bottom .widget li {border: none;text-decoration: none;color:var(--primarycolor);list-style: none;font-size: 15px;}
+
+#bottom .footer-contact li{line-height:20px;display:flex;}
+#bottom .footer-contact li:before{font-family:'Font Awesome 5 Free';font-weight:900}
+#bottom .footer-contact .address:before {content: "\f3c5"; margin-right: 10px;display:block;}
+#bottom .footer-contact .phone:before {content: "\f879"; margin-right: 10px;transform: rotate(80deg);display:block;}
+#bottom .footer-contact .email:before {content: "\f0e0"; margin-right: 10px; display:block;}
+.flogo {margin-top: 5rem;}
+.flogo1{margin:2rem auto; width:300px;}
+.info li{line-height:30px;display:flex;font-weight:300;}
+.info .address:before {content: "\f3c5"; margin-right: 10px;font-size: 24px;color:var(--secondarycolor)}
+.info .phone:before {content: "\f095"; margin-right: 10px;font-size: 24px;color:var(--secondarycolor)}
+.info .email:before {content: "\f0e0"; margin-right: 10px;font-size: 24px;color:var(--secondarycolor)}
+.social {display: table;}
+.social ul{display: flex}
+.social ul li{list-style-type: none}
+.social img {width: 40px;margin-right: 10px;}
+.pop-contact {margin-top: 1rem; text-align:center;}
+.pop-upform img {
+	width: 220px;
+	margin: 0 auto;
+}
+.pop-contact i {color: #fff;background: var(--secondarycolor);padding: 6px;border-radius: 50%;font-size: 12px;margin-right: 7px;text-align: right !important;}
+.pum-theme-163 .pum-container, .pum-theme-enterprise-blue .pum-container {
+	border: 5px solid var(--tertiarycolor) !important; background-color:#F6F8FB;
+}
+#footer {clear: both;background:#f5f5f5;color:var(--primarycolor);padding:0 0 0.5rem;text-align: center;font-size:12px;}
+#footer a {color:var(--primarycolor);}
+#footer a:hover {color:var(--secondarycolor);}
+.fleft {float: left;}
+.fright {float: right;}
+
+
+@media screen and (max-width: 981px) {
+body {min-width: 230px;}
+.desktoponly {display: none;}
+.inner {width: 100%;padding: 0%;}
+img.alignleft,
+img.alignright {float: none;display: block;margin: 10px auto;}
+.site-menu-toggle{display: block;color: var(--secondarycolor);}
+.site-navbar{display: none;}
+.mobbtn{display:block !important;}
+.mobbtn .fas.fa-phone {transform: rotate(180deg);}
+.popup-maker{margin-top:1rem;}
+.pop-contact {margin: 5px 25px;text-align:center;}
+.popup-maker h2 {display: none;}
+.category-3 #pagetitle {background-image: url('https://www.holidaystohimachal.com/wp-content/uploads/2022/10/honeymoon.jpg');background-position: bottom;}
+.mobbtn i{margin-right:5px;}
+#mainnav{padding:0}
+#single-post {padding: 1rem;}
+.threesec {display: none;}
+.cta-btn {padding: 0.3rem 2.4rem;margin: 0 auto;}
+.btns {display: flex;}
+.cta {padding: 1.4rem;text-align:center;}
+.briefdetail {width: 100%;padding: 1rem;}
+.category-4 #pagetitle {background-position: bottom;}
+.threeimg {padding: 2rem 0;}
+.booking-online {border: 10px solid var(--tertiarycolor);}
+#single-post {margin-top: 1rem;}
+ #topheader {padding: 1rem 0;}
+.briefdetail {position: relative;top: 0;margin-bottom: 1rem;}
+.briefdetail .col-md-5 {margin-top: 2rem;}
+.briefdetail #contactform {width: 100%;margin: 0 auto;}
+#logo{display:flex;align-items:center;justify-content:space-between}
+#logo .site-title{margin: 10px 0;}
+#logo img{width: 130px;height: auto;float:left;}
+.header_area.navbar_fixed #logo img{width:130px;}
+#slider .item {height: 350px;}
+.carousel-caption { top: 3.7rem;}
+#packages .col-md-4{max-width:80%;margin: 2rem auto 0;float:none}
+#twosec .col-md-6{margin:1.5rem 0}
+#payment .col-md-3{margin-bottom:2rem}
+.destination .owl-nav{margin: 0 auto;display: inline-flex;width: 63px;}
+.destination .owl-nav .owl-next, .destination .owl-prev{position: relative}
+.destination .owl-nav img{width: 24px !important;}
+.destination .owl-nav .owl-next{right:0}
+.destination .owl-nav .owl-prev{left: 0;}
+.flogo{margin:0 0 2rem;}
+.banner .social{display: none}
+#bottom {width: 100%;display: block;}
+ #bottom .col-md-3{margin-bottom:2rem}
+.fleft, .fright {float: none;}
+.choose-icon {position: unset;}
+.icon-box {	margin-top: 1rem;}
+.destination .item {margin: 0 auto;width: 90%;}
+.destination .owl-nav {display: none;}
+#radiobtn{display:block}
+.category-1 #pagetitle {padding: 5rem 0 !important;}
+.category-3 #pagetitle {
+	padding: 12rem 0;
+}
+.single-post #pagetitle {
+	padding: 7rem 0;
+}
+.page-id-48 #pagetitle {padding: 12rem 0 !important;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.postid-538 #single-post {margin-top: 0;}
+.postid-538 .briefdetail {top: 0rem;}
+.border {margin: 0 auto;}
+ .wpcf7-form-control.has-spinner.wpcf7-submit {
+	margin: 0 auto !important;
+}
+.page-id-975 #pagetitle {
+	padding: 10rem 0;
+	background-position: center;
+}
+	.page-id-49 #pagetitle {
+	padding: 10rem 0;
+}
+	.row1 {
+	display: flex;
+		flex-wrap:wrap;
+		
+}
+	.imgbox {
+	order: 2;
+}
+	.textbox {
+	order: 1;
+}
+	.border-box {
+	padding: 2rem 0;
+}
+	#bannertext{height:300px}
+	#bannertext h1{position: relative;left:unset;top:unset;font-size: 1.8rem;line-height:2rem;}
+	#bannertext{display: flex;align-items: center}
+	#rightform{position: relative;background:#f5f5f5;width:85%;margin:0 auto;left:unset;right:unset}
+}
+@media screen and (min-width: 981px) {
+.mobileonly {display: none;}
+.lefthalf {float: left;width: 48%;}
+.righthalf {float: right;width: 48%;}
+.site-menu-toggle{display:none;}
+}
+
+
+@media screen and (max-width: 800px) {
+  #topheader .col-md-8{display:none}
+  .carousel-caption{left: 5%;right:5%}
+  .carousel-caption h1{font-size:3rem;line-height: 3rem;}
+  .carousel-caption p{font-size:1rem}
+  .btn-primary{margin:1rem auto}
+  #twosec h2{width: 20%}
+	#fantastic{background:url('https://www.holidaystohimachal.com/wp-content/uploads/2022/09/Holidaystohimachal-mbanner.jpg');background-size: 100% 100%;background-repeat: no-repeat;padding: 0;height: 350px;}
+  #fantastic img{width: 250px}
+  
+}
+@media screen and (max-width: 600px) {
+.wp-pagenavi span.pages, .wp-pagenavi a , .wp-pagenavi a.nextpostslink  {padding: 0.3rem 0.6rem !important;}
+.wp-pagenavi span.current{padding:0.8rem}
+.column, .column3, .column4{column-count:1}
+  .carousel-caption h1{font-size:2rem;}
+  #packages .col-md-4{max-width:100%;}
+  #fantastic{height: 200px}
+}
+
+@media screen and (min-width: 220px) and (max-width: 420px) {
+.carousel-caption {right: 5%;top: 25%;left: 5%;}
+#slider{height:350px}
+  .carousel-caption h1{font-size:2rem;line-height: 2.5rem}
+  .btn-primary{padding:8px 2rem}
+  .features ul{grid-template-columns: auto auto}
+	#twosec h2 {  width: 70%;  font-size: 2rem;  left: 3rem;  top: 3rem;}
+}
+
+@media screen and (min-width: 421px) and (max-width: 500px) {
+#bottom .col-md-3{width: 49%;float: left;word-wrap: anywhere}
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+#bottom .col-md-3{width: 47%;float: left;}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1200px) {
+#packages .col-md-4{max-width: 49.333%;}
+}
